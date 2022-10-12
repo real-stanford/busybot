@@ -1,0 +1,28 @@
+{
+    "Category": "Toy",
+    "InstanceId": "toy1",
+    "Scale": 0.4,
+    "Movable_link": {},
+    "Orientation": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "MaxBBox": [0.928824, 0.402873, 0.053442],
+    "MinBBox": [-0.927036, -0.400476, -0.054304],
+    "Offset_z": 0,
+    "Direction": null,
+    "Cause": [],
+    "Effect": [
+        {
+            "Type": "joint",
+            "JointId": [1, 2],
+            "LinkId": null,
+            "IsMultiEffect": 1,
+            "Steps": [[0, 0], [0, -0.3], [0, 0.3]],
+            "IsSingleEffect": 0,
+            "States": null
+        }
+    ]
+}

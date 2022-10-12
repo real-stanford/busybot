@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<robot name="toy-2">
+  <link name="base">
+    <inertial>
+      <mass value="1" />
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+    </inertial>
+  </link>
+  <joint name="base-connect" type="fixed">
+    <parent link="base"/>
+    <child link="panel"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+	
+
+
+  <link name="panel">
+    <contact>
+    	<friction_anchor/>
+    	   <lateral_friction value="0.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <!-- mass controls penetration -->
+       <mass value=".5"/>
+       <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="toy-2.obj"/>
+      </geometry>
+       <material name="white">
+        <color rgba="0.7 0.7 0.7 1"/>
+      </material>
+    </visual>
+    <collision concave="yes">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="toy-2.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="yDir" type="prismatic">
+    <parent link="panel"/>
+    <child link="connector"/>
+    <origin xyz= "0 0 0.0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="10.0" lower="-10" upper="10" velocity="1"/>
+  </joint>
+    <link name="connector">
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+    </link>
+  <joint name="xDir" type="prismatic">
+    <parent link="connector"/>
+    <child link="knob"/>
+    <origin xyz= "0 0 0.0"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="10.0" lower="-0.5" upper="0.5" velocity="1"/>
+  </joint>
+  <link name="knob">
+    <contact>
+    	<friction_anchor/>
+    	   <lateral_friction value="0.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <!-- mass controls penetration -->
+       <mass value=".5"/>
+       <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="knob.obj" scale="2 2 2"/>
+      </geometry>
+       <material name="knob_mtl">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="knob-collision.obj"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>
+
+
+

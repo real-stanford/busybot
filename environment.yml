@@ -1,0 +1,29 @@
+name: busybot_env
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.7
+  - pip
+  - pytorch=1.8.1
+  - torchvision=0.9.1
+  - cudatoolkit=11.1
+  - pip:
+    - pybullet
+    - transformations
+    - open3d
+    - opencv-python
+    - tensorboard>=2.4.1
+    - dominate>=2.6.0
+    - imageio>=2.9.0
+    - h5py>=3.1.0
+    - shapely==1.8.0
+    - browsepy==0.5.6
+    - numpy==1.21.4
+    - Pillow==8.4.0
+    - progressbar==2.5
+    - tensorboard==2.7.0
+    - tensorboard-data-server==0.6.1
+    - tensorboard-plugin-wit==1.8.0
+    - protobuf==3.20.0

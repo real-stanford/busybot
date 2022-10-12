@@ -1,0 +1,1 @@
+{"Category": "Door", "InstanceId": "9065", "Scale": 0.4, "Movable_link": {}, "Orientation": [0, 0.7071068, 0, 0.7071068], "MaxBBox": [0.901681, 0.46416, 0.081022], "MinBBox": [-0.898749, -0.46179, -0.089003], "Offset_z": 0.0356012, "Direction": null, "Effect": [{"Type": "joint", "JointId": 1, "LinkId": null, "IsMultiEffect": 0, "IsSingleEffect": 1}], "Cause": []}

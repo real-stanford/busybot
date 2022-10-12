@@ -1,0 +1,14 @@
+python planning.py \
+	--en_model cnn \
+	--dy_model gnn \
+	--nf_hidden_dy 32 \
+	--n_kp 10 \
+	--min_res 22 \
+	--n_identify 23 \
+	--n_his 1 \
+	--n_roll 6 \
+	--edge_st_idx 1 \
+	--edge_share 0 \
+	--batch_size 1 \
+	--edge_encoding_dim 32 \
+	--encode_action 1

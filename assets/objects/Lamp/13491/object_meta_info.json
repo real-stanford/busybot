@@ -1,0 +1,68 @@
+{
+    "Category": "Lamp",
+    "InstanceId": "13491",
+    "Scale": 0.6,
+    "Movable_link": {},
+    "Orientation": [
+        0,
+        0,
+        0,
+        1
+    ],
+    "MaxBBox": [
+        0.321993,
+        0.327091,
+        0.996768
+    ],
+    "MinBBox": [
+        -0.324169,
+        -0.319071,
+        -0.295978
+    ],
+    "Offset_z": 0.17758680000000002,
+    "Direction": null,
+    "Effect": [
+        {
+            "Type": "link",
+            "JointId": null,
+            "LinkId": 1,
+            "IsMultiEffect": 1,
+            "Steps": [
+                [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                [
+                    1,
+                    1,
+                    0,
+                    1
+                ],
+                [
+                    1,
+                    0,
+                    0,
+                    1
+                ]
+            ],
+            "IsSingleEffect": 1,
+            "States": [
+                [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                [
+                    1,
+                    0,
+                    1,
+                    1
+                ]
+            ]
+        }
+    ],
+    "Cause": []
+}

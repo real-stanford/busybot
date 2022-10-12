@@ -1,0 +1,123 @@
+newmtl material-0
+illum 3
+d 1
+Ns 30
+Kd 1 1 1 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+map_Kd ../images/texture_0.jpg
+
+
+newmtl material-1
+illum 3
+d 1
+Ns 30
+Kd 1 1 1 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+map_Kd ../images/texture_1.jpg
+
+
+newmtl material-2
+illum 3
+d 1
+Ns 30
+Kd 1 1 1 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+map_Kd ../images/texture_2.jpg
+
+
+newmtl material-3
+illum 3
+d 1
+Ns 30
+Kd 1 1 1 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+map_Kd ../images/texture_3.jpg
+
+
+newmtl material-4
+illum 3
+d 1
+Ns 30
+Kd 0.8823529411764706 0.8823529411764706 0.7843137254901961 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+
+
+newmtl material-5
+illum 3
+d 1
+Ns 30
+Kd 1 1 1 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+map_Kd ../images/texture_4.jpg
+
+
+newmtl material-6
+illum 3
+d 1
+Ns 30
+Kd 1 1 1 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+map_Kd ../images/texture_5.jpg
+
+
+newmtl material-7
+illum 3
+d 1
+Ns 30
+Kd 1 1 1 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+map_Kd ../images/texture_6.jpg
+
+
+newmtl material-8
+illum 3
+d 1
+Ns 30
+Kd 1 1 1 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+map_Kd ../images/texture_7.jpg
+
+
+newmtl material-9
+illum 3
+d 1
+Ns 30
+Kd 0.2 0 0 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+
+
+newmtl material-10
+illum 3
+d 1
+Ns 30
+Kd 1 1 1 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+map_Kd ../images/texture_8.jpg
+
+
+newmtl material-11
+illum 4
+d 0.5
+Ns 30
+Kd 1 1 1 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+map_Kd ../images/texture_9.jpg
+
+
+newmtl material-12
+illum 3
+d 1
+Ns 30
+Kd 1 1 1 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+map_Kd ../images/texture_10.jpg
+
+
+newmtl material-13
+illum 3
+d 1
+Ns 30
+Kd 0 0 0 
+Ks 0.06666666666666667 0.06666666666666667 0.06666666666666667 
+
+

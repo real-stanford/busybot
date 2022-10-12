@@ -1,0 +1,112 @@
+<robot name="partnet_24ef5084512256551bffd4bc88cc8d80">
+	<link name="base"><inertial><mass value="10" /><inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" /></inertial></link>
+	<link name="link_0">
+		<visual name="outside_frame-1">
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="textured_objs/new-4.obj" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="textured_objs/new-4.obj" />
+			</geometry>
+		</collision>
+	<inertial><mass value="10" /><inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" /></inertial></link>
+	<joint name="joint_0" type="fixed">
+		<origin rpy="1.570796326794897 0 -1.570796326794897" xyz="0 0 0" />
+		<child link="link_0" />
+		<parent link="base" />
+	</joint>
+	<link name="link_1">
+		<visual name="movable_part-6">
+			<origin xyz="-0.2993128347862915 0.01659942510257406 0.014336999999999378" />
+			<geometry>
+				<mesh filename="textured_objs/original-2.obj" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="-0.2993128347862915 0.01659942510257406 0.014336999999999378" />
+			<geometry>
+				<mesh filename="textured_objs/original-2.obj" />
+			</geometry>
+		</collision>
+	<inertial><mass value="10" /><inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" /></inertial></link>
+	<joint name="joint_1" type="revolute">
+		<origin xyz="0.6663215063128132 -0.8974214251025738 -0.022139757071257815" />
+		<axis xyz="0 0 1" />
+		<child link="link_1" />
+		<parent link="link_2" />
+		<limit effort="30" lower="0.0" upper="1.5707963267948966" velocity="1.0" />
+	</joint>
+	<link name="link_2">
+		<visual name="surface_board-7">
+			<origin xyz="0.3670086715265216 -0.8808219999999998 -0.007802757071258437" />
+			<geometry>
+				<mesh filename="textured_objs/new-3.obj" />
+			</geometry>
+		</visual>
+		<visual name="surface_board-7">
+			<origin xyz="0.3670086715265216 -0.8808219999999998 -0.007802757071258437" />
+			<geometry>
+				<mesh filename="textured_objs/new-6.obj" />
+			</geometry>
+		</visual>
+		<visual name="glass-8">
+			<origin xyz="0.3670086715265216 -0.8808219999999998 -0.007802757071258437" />
+			<geometry>
+				<mesh filename="textured_objs/new-2.obj" />
+			</geometry>
+		</visual>
+		<visual name="glass-8">
+			<origin xyz="0.3670086715265216 -0.8808219999999998 -0.007802757071258437" />
+			<geometry>
+				<mesh filename="textured_objs/new-5.obj" />
+			</geometry>
+		</visual>
+		<visual name="fixed_part-5">
+			<origin xyz="0.3670086715265216 -0.8808219999999998 -0.007802757071258437" />
+			<geometry>
+				<mesh filename="textured_objs/new-0.obj" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="0.3670086715265216 -0.8808219999999998 -0.007802757071258437" />
+			<geometry>
+				<mesh filename="textured_objs/new-3.obj" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0.3670086715265216 -0.8808219999999998 -0.007802757071258437" />
+			<geometry>
+				<mesh filename="textured_objs/new-6.obj" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0.3670086715265216 -0.8808219999999998 -0.007802757071258437" />
+			<geometry>
+				<mesh filename="textured_objs/new-2.obj" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0.3670086715265216 -0.8808219999999998 -0.007802757071258437" />
+			<geometry>
+				<mesh filename="textured_objs/new-5.obj" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0.3670086715265216 -0.8808219999999998 -0.007802757071258437" />
+			<geometry>
+				<mesh filename="textured_objs/new-0.obj" />
+			</geometry>
+		</collision>
+	<inertial><mass value="10" /><inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" /></inertial></link>
+	<joint name="joint_2" type="revolute">
+		<origin xyz="-0.3670086715265216 0.8808219999999998 0.007802757071258437" />
+		<axis xyz="0 -1 0" />
+		<child link="link_2" />
+		<parent link="link_0" />
+		<limit effort="30" lower="0.0" upper="1.5707963267948966" velocity="1.0" />
+	</joint>
+</robot>

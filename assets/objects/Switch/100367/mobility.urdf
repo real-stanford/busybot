@@ -1,0 +1,178 @@
+<robot name="partnet_01e2c09a-a2c1-4ce3-aa9c-0b4d293d8eb8">
+	<link name="base"><inertial><mass value="10" /><inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" /></inertial></link>
+	<link name="link_0">
+		<visual name="switch-3">
+			<origin xyz="0.2838207236507393 -0.41027900000000006 -0.041660457683965646" />
+			<geometry>
+				<mesh filename="textured_objs/original-6.obj" />
+			</geometry>
+		</visual>
+		<visual name="switch-3">
+			<origin xyz="0.2838207236507393 -0.41027900000000006 -0.041660457683965646" />
+			<geometry>
+				<mesh filename="textured_objs/original-7.obj" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="0.2838207236507393 -0.41027900000000006 -0.041660457683965646" />
+			<geometry>
+				<mesh filename="textured_objs/original-6.obj" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0.2838207236507393 -0.41027900000000006 -0.041660457683965646" />
+			<geometry>
+				<mesh filename="textured_objs/original-7.obj" />
+			</geometry>
+		</collision>
+	<inertial><mass value="10" /><inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" /></inertial></link>
+	<joint name="joint_0" type="revolute">
+		<origin xyz="-0.2838207236507393 0.41027900000000006 0.041660457683965646" />
+		<axis xyz="0 1 0" />
+		<child link="link_0" />
+		<parent link="link_4" />
+		<limit effort="30" lower="0.0" upper="0.3392920065876977" velocity="1.0" />
+	</joint>
+	<link name="link_1">
+		<visual name="switch-4">
+			<origin xyz="-0.2310836131113914 0.3980400000000004 -0.04455635095940119" />
+			<geometry>
+				<mesh filename="textured_objs/original-8.obj" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="-0.2310836131113914 0.3980400000000004 -0.04455635095940119" />
+			<geometry>
+				<mesh filename="textured_objs/original-8.obj" />
+			</geometry>
+		</collision>
+	<inertial><mass value="10" /><inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" /></inertial></link>
+	<joint name="joint_1" type="revolute">
+		<origin xyz="0.2310836131113914 -0.3980400000000004 0.04455635095940119" />
+		<axis xyz="0 1 0" />
+		<child link="link_1" />
+		<parent link="link_4" />
+		<limit effort="30" lower="0.0" upper="0.25132741228718347" velocity="1.0" />
+	</joint>
+	<link name="link_2">
+		<visual name="switch-5">
+			<origin xyz="0.3057951825429795 0.39804000000000084 -0.04034042777380281" />
+			<geometry>
+				<mesh filename="textured_objs/original-3.obj" />
+			</geometry>
+		</visual>
+		<visual name="switch-5">
+			<origin xyz="0.3057951825429795 0.39804000000000084 -0.04034042777380281" />
+			<geometry>
+				<mesh filename="textured_objs/original-4.obj" />
+			</geometry>
+		</visual>
+		<visual name="switch-5">
+			<origin xyz="0.3057951825429795 0.39804000000000084 -0.04034042777380281" />
+			<geometry>
+				<mesh filename="textured_objs/original-5.obj" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="0.3057951825429795 0.39804000000000084 -0.04034042777380281" />
+			<geometry>
+				<mesh filename="textured_objs/original-3.obj" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0.3057951825429795 0.39804000000000084 -0.04034042777380281" />
+			<geometry>
+				<mesh filename="textured_objs/original-4.obj" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0.3057951825429795 0.39804000000000084 -0.04034042777380281" />
+			<geometry>
+				<mesh filename="textured_objs/original-5.obj" />
+			</geometry>
+		</collision>
+	<inertial><mass value="10" /><inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" /></inertial></link>
+	<joint name="joint_2" type="revolute">
+		<origin xyz="-0.3057951825429795 -0.39804000000000084 0.04034042777380281" />
+		<axis xyz="0 1 0" />
+		<child link="link_2" />
+		<parent link="link_4" />
+		<limit effort="30" lower="0.0" upper="0.2764601535159018" velocity="1.0" />
+	</joint>
+	<link name="link_3">
+		<visual name="switch-6">
+			<origin xyz="-0.2310836131113914 0.3980400000000004 -0.04455635095940119" />
+			<geometry>
+				<mesh filename="textured_objs/original-14.obj" />
+			</geometry>
+		</visual>
+		<visual name="switch-6">
+			<origin xyz="-0.2310836131113914 0.3980400000000004 -0.04455635095940119" />
+			<geometry>
+				<mesh filename="textured_objs/original-9.obj" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="-0.2310836131113914 0.3980400000000004 -0.04455635095940119" />
+			<geometry>
+				<mesh filename="textured_objs/original-14.obj" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="-0.2310836131113914 0.3980400000000004 -0.04455635095940119" />
+			<geometry>
+				<mesh filename="textured_objs/original-9.obj" />
+			</geometry>
+		</collision>
+	<inertial><mass value="10" /><inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" /></inertial></link>
+	<joint name="joint_3" type="revolute">
+		<origin xyz="0.2310836131113914 -0.3980400000000004 0.04455635095940119" />
+		<axis xyz="0 1 0" />
+		<child link="link_3" />
+		<parent link="link_4" />
+		<limit effort="30" lower="0.0" upper="0.2890265241302609" velocity="1.0" />
+	</joint>
+	<link name="link_4">
+		<visual name="base_body-7">
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="textured_objs/original-13.obj" />
+			</geometry>
+		</visual>
+		<visual name="base_body-7">
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="textured_objs/original-11.obj" />
+			</geometry>
+		</visual>
+		<visual name="base_body-7">
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="textured_objs/original-12.obj" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="textured_objs/original-13.obj" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="textured_objs/original-11.obj" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0 0 0" />
+			<geometry>
+				<mesh filename="textured_objs/original-12.obj" />
+			</geometry>
+		</collision>
+	<inertial><mass value="10" /><inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" /></inertial></link>
+	<joint name="joint_4" type="fixed">
+		<origin rpy="1.570796326794897 0 -1.570796326794897" xyz="0 0 0" />
+		<child link="link_4" />
+		<parent link="base" />
+	</joint>
+</robot>
