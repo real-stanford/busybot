@@ -1,16 +1,12 @@
 # BusyBot: Learning to Interact, Reason, and Plan in a BusyBoard Environment
 
-<div style="text-align: center;">
-
 [Zeyi Liu](https://lzylucy.github.io/), [Zhenjia Xu](https://www.zhenjiaxu.com/), [Shuran Song](https://www.cs.columbia.edu/~shurans/)
-
+<br>
 Columbia University, New York, NY, United States
-
+<br>
 [Conference on Robot Learning 2022](https://www.robot-learning.org/)
 
-[Project Page](https://busybot.cs.columbia.edu/) | [Video](https://www.youtube.com/watch?v=EJ98xBJZ9ek) | [arXiv](https://arxiv.org/abs/2207.08192)
-
-</div>
+### [Project Page](https://busybot.cs.columbia.edu/) | [Video](https://www.youtube.com/watch?v=EJ98xBJZ9ek) | [arXiv](https://arxiv.org/abs/2207.08192)
 
 <img style="left-margin:50px; right-margin:50px;" src="teaser.png">
 
