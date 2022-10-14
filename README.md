@@ -8,7 +8,7 @@ Columbia University, New York, NY, United States
 
 [Conference on Robot Learning 2022](https://www.robot-learning.org/)
 
-[Project Page](https://busybot.cs.columbia.edu/) | [Video](https://www.youtube.com/watch?v=EJ98xBJZ9ek) | [Arxiv](https://arxiv.org/abs/2207.08192)
+[Project Page](https://busybot.cs.columbia.edu/) | [Video](https://www.youtube.com/watch?v=EJ98xBJZ9ek) | [arXiv](https://arxiv.org/abs/2207.08192)
 
 </div>
 
@@ -66,6 +66,9 @@ cd plan
 bash scripts/planning.sh
 ```
 
+## Acknowledgement
+We refer to [UMPNet](https://github.com/columbia-ai-robotics/umpnet) by Zhenjia Xu for the interaction module and [V-CDN](https://github.com/pairlab/v-cdn) by Yunzhu Li for the reasoning module when developing this codebase.
+
 ## Citation
 If you find this codebase useful, consider citing:
 <div style="display:flex;">
@@ -75,7 +78,7 @@ If you find this codebase useful, consider citing:
 @inproceedings{liu2022busybot,
 	title={BusyBot: Learning to Interact, Reason, and Plan in a BusyBoard Environment},
 	author={Liu, Zeyi and Xu, Zhenjia and Song, Shuran},
-	booktitle={Conference on Robotic Learning (CoRL)},
+	booktitle={Conference on Robot Learning (CoRL)},
 	year={2022}
 }
 ```

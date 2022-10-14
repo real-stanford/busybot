@@ -57,7 +57,7 @@ parser.add_argument('--dir_learning_rate', default=1e-4,
                     type=float, help='learning rate of the direction optimizer')
 parser.add_argument('--pos_learning_rate_decay', default=90,
                     type=int, help='learning rate decay for position')
-parser.add_argument('--dir_learning_rate_decay', default=150,
+parser.add_argument('--dir_learning_rate_decay', default=75,
                     type=int, help='learning rate decay for direction')
 parser.add_argument('--epoch', default=800, type=int,
                     help='How many training epochs')
@@ -129,13 +129,13 @@ def main():
     pos_scheduler = torch.optim.lr_scheduler.StepLR(
         pos_optimizer, step_size=args.pos_learning_rate_decay, gamma=0.5)
     dir_scheduler = torch.optim.lr_scheduler.StepLR(
-        dir_optimizer, step_size=args.dir_learning_rate_decay, gamma=0.5)
+        dir_optimizer, step_size=args.dir_learning_rate_decay, gamma=0.7)
     replay_buffer = ReplayBuffer(
         args.replay_buffer_dir, args.replay_buffer_size)
 
     # Set device
-    device_pos = torch.device(f'cuda:7')
-    device_dir = torch.device(f'cuda:7')
+    device_pos = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device_dir = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = model.to(device_pos, device_dir)
 
     if args.load_replay_buffer is not None:
@@ -299,8 +299,12 @@ def main():
 
         # Policy training
         iter_info = list()
-        if (epoch + 1) >= args.position_start_epoch and (epoch + 1) <= 100:
+        if (epoch + 1) >= args.position_start_epoch: # and (epoch + 1) <= 100:
             iter_info.append(('pos', args.pos_iter_per_epoch))
+            # decrease the learning rate
+            if (epoch + 1) > 100:
+                for g in pos_optimizer.param_groups:
+                    g['lr'] = 1e-6
         if (epoch + 1) >= args.direction_start_epoch:
             iter_info.append(('dir', args.dir_iter_per_epoch))
 

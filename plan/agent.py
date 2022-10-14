@@ -17,7 +17,6 @@ from utils import *
 class Agent(object):
     def __init__(self, args, phase, data_folder):
         use_gpu = torch.cuda.is_available()
-        set_seed(5) # fix random seed
         
         self.args = args
         self.phase = phase
@@ -35,7 +34,7 @@ class Agent(object):
         print("==> dynamics network loaded from {}".format(model_dy_path))
 
         self.model_graph = DynaNetGNN(args, use_gpu=use_gpu)
-        if phase == 'valid' or phase == 'train':
+        if phase == 'train' or phase == 'valid':
             model_graph_path = '../reason/pre-trained/dynamics_best.pth'
         if phase == 'unseen':
             model_graph_path = '../reason/pre-trained/graph_best.pth'
@@ -134,7 +133,7 @@ class Agent(object):
         graph = self.model_dy.graph_inference(kps, actions)
         n_kp = kps.size(2)
         
-        edge_attr, edge_type_logits = graph[1], graph[3]
+        _, edge_type_logits = graph[1], graph[3]
         idx_pred = torch.argmax(edge_type_logits, dim=3)[0]
         # zero out effect columns
         cause_indices = np.where(obj_types_cause_mask == 1)[0]
@@ -201,6 +200,7 @@ class Agent(object):
 
         # get and return per-object acc
         cur_image = Image.fromarray((self.sim.get_observation()['image'][:, :, :3] * 255).astype(np.uint8))
+        cur_image.save(os.path.join(sample_planning_path, 'step_{}.png'.format(max_steps+1)))
         cur_state = self.get_state(sample_idx, cur_image, cause_indices, base_position)[0]
         return self.get_per_object_acc(gt_edge_type, cause_indices, cur_state, goal_state)
 
@@ -212,7 +212,7 @@ class Agent(object):
         graph_2 = self.model_dy.graph_inference(kps, actions)
         n_kp = kps.size(2)
         
-        edge_attr, edge_type_logits = graph[1], graph[3]
+        _, edge_type_logits = graph[1], graph[3]
         idx_pred = torch.argmax(edge_type_logits, dim=3)[0]
         # zero out effect columns
         cause_indices = np.where(obj_types_cause_mask == 1)[0]
@@ -308,6 +308,7 @@ class Agent(object):
 
             # get and return per-object acc
             cur_image = Image.fromarray((self.sim.get_observation()['image'][:, :, :3] * 255).astype(np.uint8))
+            cur_image.save(os.path.join(sample_planning_path, 'step_{}.png'.format(max_steps+1)))
             cur_state = self.get_state(sample_idx, cur_image, cause_indices, base_position)[0]
             return self.get_per_object_acc(gt_edge_type, cause_indices, cur_state, goal_state)
         
