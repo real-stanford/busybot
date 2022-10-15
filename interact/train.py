@@ -59,7 +59,7 @@ parser.add_argument('--pos_learning_rate_decay', default=90,
                     type=int, help='learning rate decay for position')
 parser.add_argument('--dir_learning_rate_decay', default=75,
                     type=int, help='learning rate decay for direction')
-parser.add_argument('--epoch', default=800, type=int,
+parser.add_argument('--epoch', default=400, type=int,
                     help='How many training epochs')
 parser.add_argument('--pos_iter_per_epoch', default=8, type=int,
                     help='number of training iterations per epoch (pos)')

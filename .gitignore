@@ -1,4 +1,5 @@
 interact/data
+interact/data-small
 interact/exp
 interact/pre-trained
 interact/__pycache__

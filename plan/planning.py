@@ -9,7 +9,7 @@ args = gen_args()
 
 if __name__ == '__main__':
     for phase in ['valid', 'unseen', 'train']:
-        for data_folder in ['plan-multi']:
+        for data_folder in ['plan-binary', 'plan-multi']:
             num_evaluation, total_success_rates = 50, [0, 0, 0]
             agent = Agent(args, phase, data_folder)
             for sample_idx in range(num_evaluation):
