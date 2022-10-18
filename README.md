@@ -33,7 +33,7 @@ The full ```data``` directory is organized as follows:
     │   │   ├── 1/    # each scene contains 30 frames
     │   │   │   ├── fig_0.png
     │   │   │   ├── ...
-	│   │   │   ├── fig_29.png
+    │	│   │   │   ├── fig_29.png
     │   │   │   └── data.h5
     │   │   ├── ...
     │   │   ├── 10,000/
