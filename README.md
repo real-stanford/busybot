@@ -112,10 +112,12 @@ If you find this codebase useful, consider citing:
 <div>
 
 ```
-@inproceedings{liu2022busybot,
+@inproceedings{liu2023busybot,
 	title={BusyBot: Learning to Interact, Reason, and Plan in a BusyBoard Environment},
 	author={Liu, Zeyi and Xu, Zhenjia and Song, Shuran},
-	booktitle={Conference on Robot Learning (CoRL)},
-	year={2022}
+	booktitle={Conference on Robot Learning},
+	pages={505--515},
+	year={2023},
+	organization={PMLR}
 }
 ```
